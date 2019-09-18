@@ -9,7 +9,13 @@ class LocationDetail extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       appBar: AppBar(
-      title: Text('Hello'),
+        backgroundColor: Colors.white,
+      title: Text(
+        'Image Show', style: TextStyle
+        (
+          fontWeight: FontWeight.bold,color: Colors.black
+        ),
+      ),
       ),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
