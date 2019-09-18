@@ -1,7 +1,3 @@
-# flutter_tutorial
-
-Tutorial Flutter
-
 ## Getting Started
 
 This project is a starting point for a Flutter application.
