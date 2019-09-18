@@ -1,24 +1,33 @@
 import "package:flutter/material.dart";
 
 class TextSection extends StatelessWidget {
-  final Color _color;
-  final String _text;
-  TextSection(this._color, this._text);
+  final String _title;
+  final String _body;
+  static const double _hPad = 16.0;
+
+  TextSection(this._title, this._body);
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-          color: _color,
-          border: Border(
-            bottom: BorderSide(color: Colors.black26, width: 2.0
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      crossAxisAlignment: CrossAxisAlignment.stretch,
+      children: [
+        Container(
+          padding: const EdgeInsets.fromLTRB(_hPad, 32.0, _hPad, 20.0),
+          child: Text(
+            _title.toUpperCase(),
+            style: Theme.of(context).textTheme.title,
           ),
-        ), 
-      ),
-     child: Padding(
-       padding: EdgeInsets.all(20.00),
-        child: Text( _text, style: TextStyle(fontFamily: 'SF-Pro-Text-Bold', fontSize: 20.00,color: Colors.black87),
-      ),
-     ),
+        ),
+        Container(
+          padding: const EdgeInsets.fromLTRB(_hPad, 0.0, _hPad, 32.0),
+          child: Text(
+            _body, 
+            style: Theme.of(context).textTheme.body1,
+            textAlign: TextAlign.justify,
+          ),
+        ),
+      ],
     );
   }
 }
